@@ -1,0 +1,8 @@
+<h2>Autobuy</h2>
+<% if user_signed_in? %>
+	<%= current_user.email %>
+	<%= link_to "sign out", destroy_user_session_path %>
+<% else %>
+	<%= link_to "sign_up", new_user_registration_path %>
+	<%= link_to "sign_in", new_user_session_path %>
+<% end %>
